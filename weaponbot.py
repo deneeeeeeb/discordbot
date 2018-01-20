@@ -4,7 +4,7 @@
 import discord
 import random
 import configparser
-
+import os
 
 client = discord.Client()
 
@@ -116,8 +116,9 @@ async def on_message(message):
 
 
 # run
+confpath = os.path.dirname(os.path.abspath(__file__)) + "/etc/token.conf"
 inifile = configparser.ConfigParser()
-inifile.read('./etc/token.conf', 'UTF-8')
+inifile.read(confpath, 'UTF-8')
 TOKEN=inifile.get('prod', 'WEAPON_SELECTOR')
 client.run(TOKEN)
 
