@@ -99,6 +99,6 @@ async def on_message(message):
 # run
 inifile = configparser.ConfigParser()
 inifile.read('./etc/token.conf', 'UTF-8')
-TOKEN=inifile.get('test', 'TEAM_SELECTOR')
+TOKEN=inifile.get('prod', 'TEAM_SELECTOR')
 client.run(TOKEN)
 
