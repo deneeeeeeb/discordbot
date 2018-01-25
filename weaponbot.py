@@ -1,4 +1,4 @@
-#! /home/pi/.pyenv/shims/python
+#! /home/pi/.pyenv/shims/python -u
 
 # init
 import discord
